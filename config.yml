@@ -35,8 +35,27 @@ pipeline:
   - name: DIETClassifier
     epochs: 100
     constrain_similarities: true
-  - name: RegexEntityExtractor
-    use_lookup_tables: False
+  - name: "CRFEntityExtractor"
+    # BILOU_flag determines whether to use BILOU tagging or not.
+    "BILOU_flag": True
+    # features to extract in the sliding window
+    "features": [
+      ["low", "title", "upper"],
+      [
+        "bias",
+        "low",
+        "prefix5",
+        "prefix2",
+        "suffix5",
+        "suffix3",
+        "suffix2",
+        "upper",
+        "title",
+        "digit",
+        "pattern",
+      ],
+      ["low", "title", "upper"],
+    ]
 #     constrain_similarities: true
 #   - name: FallbackClassifier
 #     threshold: 0.3
