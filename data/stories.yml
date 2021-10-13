@@ -41,3 +41,14 @@ stories:
   - action: stock_form
   - intent: deny
   - action: utter_goodbye
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_enter_stock_code
+  - intent: check_stock_price
+    entities:
+    - stock_code: siemens
+  - action: stock_form
+  - intent: stop

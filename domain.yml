@@ -1,41 +1,31 @@
-version: "2.0"
-
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - check_stock_price
-
-entities:
-  - stock_code
-
-responses:
-  utter_greet:
-  - text: "Hey!Would you like to know the price of stocks ?"
-
-  utter_enter_stock_code:
-  - text: "Please enter the stock code for the stock price you would like to know(For NSE)"
-
-  utter_continue:
-  - text: "Would you like to Continue?"
-
-  - text: "Would you like to continue with more stocks? "
-  utter_goodbye:
-  - text: "GoodBye , have a good day"
-
-  utter_are_you_sure:
-  - text: "Are you sure you want to quit?"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
+version: '2.0'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-
+intents:
+- check_stock_price
+- greet
+- stop
+- affirm
+- deny
+- bot_challenge
+entities:
+- stock_code
+responses:
+  utter_greet:
+  - text: Hey!Would you like to know the price of stocks ?
+  utter_enter_stock_code:
+  - text: Please enter the stock code for the stock price you would like to know(For NSE)
+  utter_continue:
+  - text: Would you like to Continue?
+  - text: 'Would you like to continue with more stocks? '
+  utter_goodbye:
+  - text: GoodBye , have a good day
+  utter_are_you_sure:
+  - text: Are you sure you want to quit?
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
 actions:
 - stock_form
+- utter_enter_stock_code
+- utter_greet

@@ -1,5 +1,4 @@
 version: "2.0"
-
 nlu:
 - intent: greet
   examples: |
@@ -16,21 +15,6 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
-- intent: goodbye
-  examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -39,7 +23,6 @@ nlu:
     - of course
     - that sounds good
     - correct
-
 - intent: deny
   examples: |
     - no
@@ -50,39 +33,6 @@ nlu:
     - no way
     - not really
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
 
 - intent: bot_challenge
   examples: |
@@ -90,7 +40,6 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-
 - intent: check_stock_price
   examples: |
     - What is the price of [TATASTEEL](stock_code)
@@ -99,14 +48,21 @@ nlu:
     - What's the current price of [BATAINDIA](stock_code)
     - What's the current price of [BATAINDIA](stock_code)?
     - Show price of [TATA](stock_code)
-    - [TATA](stock_code)
-    - [ONGC](stock_code)
-    - Get me the current price of [ITC](stock_code)
-    - Show me the current price of [PFC](stock_code)
+    - Show price of [aapl](stock_code)
+    - Show price of [leMOn](stock_code)
+    - Show price of [guCCi](stock_code)
+    - Show price of [LVHM](stock_code)
+    - Show price of [TcHEM](stock_code)
+    - [TAta](stock_code)
+    - [onGC](stock_code)
+    - [indhotel](stock_code)
+    - [AaPL](stock_code)
+    - [SbUX](stock_code)
+    - Get me the current price of [itC](stock_code)
+    - Show me the current price of [PfC](stock_code)
     - What's the current price of [pfc](stock_code)
-    - What's the current price of [BHEL](stock_code)?
-
-
+    - What's the current price of [BheL](stock_code)?
+    - [siemens](stock_code)
 - intent: out_of_scope
   examples: |
     - that's not what I want to do
