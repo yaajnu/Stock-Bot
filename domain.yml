@@ -9,11 +9,19 @@ intents:
 - affirm
 - deny
 - bot_challenge
+- inform
 entities:
 - stock_code
+- option
 responses:
   utter_greet:
-  - text: Hey! Please select one option
+  - text: Hey! Select one of the options 
+    buttons:
+    - title: 1- Check profit/loss of your portfolio in real-time
+      payload: '/inform{{"option":"1"}}'
+    - title: 2- Check prices of stocks by entering stock code
+      payload: '/inform{{"option":"2"}}'
+    
   utter_enter_stock_code:
   - text: Please enter the stock code for the stock price you would like to know(For NSE)
   utter_continue:
