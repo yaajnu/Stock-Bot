@@ -82,3 +82,10 @@ nlu:
     - nevermind
     - I want to do something else
     - I changed my mind
+- intent: inform
+  examples: |
+    - ['1'](option)
+    - ['2'](option)
+    - ['3'](option)
+    - ['4'](option)
+    - ['5'](option)

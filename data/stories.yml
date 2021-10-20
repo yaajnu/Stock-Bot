@@ -6,7 +6,9 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: affirm
+  - intent: inform
+    entities:
+    - option: '2'
   - action: utter_enter_stock_code
   - intent: check_stock_price
     entities:
@@ -27,7 +29,9 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: affirm
+  - intent: inform
+    entities:
+    - option: '2'
   - action: utter_enter_stock_code
   - intent: check_stock_price
     entities:
