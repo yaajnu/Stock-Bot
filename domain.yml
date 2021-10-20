@@ -13,7 +13,7 @@ entities:
 - stock_code
 responses:
   utter_greet:
-  - text: Hey!Would you like to know the price of stocks ?
+  - text: Hey! Please select one option
   utter_enter_stock_code:
   - text: Please enter the stock code for the stock price you would like to know(For NSE)
   utter_continue:
@@ -29,3 +29,4 @@ actions:
 - stock_form
 - utter_enter_stock_code
 - utter_greet
+- select_action

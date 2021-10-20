@@ -46,3 +46,14 @@ class StockForm(Action):
 
 
         return []
+
+class select_action(Action):
+    def name(self):
+        return "select_action"
+    
+    def run(self,dispatcher: CollectingDispatcher,
+     tracker: Tracker, domain: Dict[Text, Any]):
+        buttons=[]
+        buttons.append({ "title": "Find out the profit/loss of your portfolio in real-time", "payload": "/inform{\'opc\':  \'1\' }"  })
+        buttons.append({ "title": "Check current price of stocks.", "payload": "/inform{\'opc\':  \'2\' }"  })
+        dispatcher.utter_button_message("Choose from the list:", buttons)
